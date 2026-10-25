@@ -8,6 +8,7 @@ its pipeline and its tests live in a separate repository.
 |---|---|
 | `lab/forecasts.json` | The model's forecasts of new trade restrictions between countries, issued automatically and sealed: each record carries a SHA-256 fingerprint of itself and of the record before it, so nothing issued can be changed without breaking the chain. Records are only ever added. |
 | `lab/scoreboard.json` | How the forecasts have scored so far (Brier score next to the base rate and to "last period repeats", month by month; calibration). |
+| `lab/explanations.json` | Model parameters and derived feature values that reproduce individual sealed monthly probabilities. Linked to each cycle's fingerprint; the explanations themselves are not sealed. Unavailable inputs are explicit, and capture attempts stop after day 7 of the cycle month. |
 | `lab/live.json` | Daily indicators shown on the map: ship traffic through chokepoints, world commodity prices, new sanctions designations, news-based tension, upcoming elections and leaders, UN votes, and the other ties between countries (investment, bank claims, students, tourists, US Treasury holdings). |
 | `lab/chains.json` | Retaliation chains: how targets answered when another country started measures against them (in kind, another lever, the WTO, backing down, new partners, nothing), counted from the records and from a researched catalogue, with the researched moves and their sources. |
 
